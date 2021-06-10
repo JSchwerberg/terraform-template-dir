@@ -14,6 +14,11 @@ module "template_files" {
     # Pass in any values that you wish to use in your templates.
     vpc_id = "vpc-abc123"
   }
+
+  # If your template_vars has sensitive inputs, you must set this to true
+  # to ensure that the corresponding outputs are flagged as sensitive,
+  # or you will have an error on Terraform 0.14+
+  sensitive_templates = false
 }
 ```
 

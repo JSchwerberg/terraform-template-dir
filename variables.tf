@@ -57,3 +57,9 @@ variable "default_file_type" {
   default     = "application/octet-stream"
   description = "The Content-Type value to use for any files that don't match one of the suffixes given in file_types."
 }
+
+variable "sensitive_template_vars" {
+  type        = string
+  default     = false
+  description = "If your templates contain sensitive values, this must be set to true in Terraform 0.14+. This defaults to false for backwards-compatibility as well as usability."
+}
